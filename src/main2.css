@@ -1,14 +1,21 @@
-/*::-webkit-scrollbar {
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Выравнивание iframe по центру вертикально на весь экран */
+}
 
-	width: 0px;
-	
-	background: transparent;
-	
-	}
-*/
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+/* Стили для самого iframe */
+.power-bi-iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Удаление границы iframe, если есть */
+}
+
+/* Медиа-запрос для адаптивности */
+@media screen and (max-width: 480px) {
+  /* Дополнительные стили для устройств с шириной меньше или равной 480px */
+  .iframe-wrapper {
+    padding: 10px; /* Добавляем отступы для маленьких устройств */
+  }
 }
